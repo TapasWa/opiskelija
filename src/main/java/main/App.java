@@ -33,10 +33,11 @@ public class App {
                 case 2:
                     System.out.println("Opiskelijat:");
                     List<Student> students = university.getStudents();
-                    for (int i = 0; i < students.size(); i++) {
-                        System.out.println(i+students.get(i).getStudentNumber() + ": " + students.get(i).getName());
+                    for (Student student : students) {
+                        System.out.println(student.getStudentNumber() + ": " + student.getName());
                     }
                     break;
+
 
                 case 3:
                     System.out.println("Mille opiskelijalle suorite lisätään?");
