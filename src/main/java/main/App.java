@@ -37,7 +37,7 @@ public class App {
                 case 3:
                     System.out.println("Mille opiskelijalle suorite lisätään?");
                     int studentIndex = Integer.parseInt(scanner.nextLine());
-                    scanner.nextLine();
+                    
                     Student selectedStudent = university.getStudents().get(studentIndex);
 
                     System.out.println("Anna kurssin nimi:");
@@ -50,7 +50,7 @@ public class App {
 
                 case 4:
                     System.out.println("Minkä opiskelijan suoritteet listataan?");
-                    int selectedStudentIndex = scanner.nextInt();
+                    int selectedStudentIndex = Integer.parseInt(scanner.nextLine());
                     Student selectedStudentToPrint = university.getStudents().get(selectedStudentIndex);
                     List<Grade> studentGrades = selectedStudentToPrint.getGrades();
                     for (Grade studentGrade : studentGrades) {
@@ -68,7 +68,7 @@ public class App {
 
                 case 6:
                     System.out.println("Minkä opiskelijan suoritteiden mediaani lasketaan?");
-                    int studentMedianIndex = scanner.nextInt();
+                    int studentMedianIndex = Integer.parseInt(scanner.nextLine());
                     Student studentForMedian = university.getStudents().get(studentMedianIndex);
                     double median = Calculator.getMedianGrade(studentForMedian);
                     System.out.println("Mediaani on " + median);
