@@ -33,21 +33,24 @@ public class App {
                     System.out.println("Opiskelijat:");
                     List<Student> students = university.getStudents();
                     for (int i = 0; i < students.size(); i++) {
-                        System.out.println( students.get(i).getStudentNumber() + ": " + students.get(i).getName());
+                        System.out.println(i + ": " + students.get(i).getStudentNumber() + ": " + students.get(i).getName());
                     }
                     break;
+
 
                 case 3:
                     System.out.println("Mille opiskelijalle suorite lisätään?");
                     int studentIndex = scanner.nextInt();
-                    scanner.nextLine(); 
+                    scanner.nextLine();  
                     Student selectedStudent = university.getStudents().get(studentIndex);
-                    System.out.println("Mille kurssille suorite lisätään?");
+
+                    System.out.println("Anna kurssin nimi:");
                     String course = scanner.nextLine();
-                    System.out.println("Mikä arvosana kurssille lisätään?");
+                    System.out.println("Anna arvosana:");
                     int grade = scanner.nextInt();
                     selectedStudent.addGrade(course, grade);
                     break;
+
 
                 case 4:
                     System.out.println("Minkä opiskelijan suoritteet listataan?");
