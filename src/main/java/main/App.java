@@ -36,28 +36,31 @@ public class App {
                     break;
 
                 case 3:
-                    System.out.println("Mille opiskelijalle suorite lisätään?");
                     List<Student> studentsList2 = university.getStudents();
                     for (int i = 0; i < studentsList2.size(); i++) {
                         System.out.println(i + ": " + studentsList2.get(i).getName());
                     }
+                    System.out.println("Mille opiskelijalle suorite lisätään?");
+                    
+                    
                     int studentIndex = Integer.parseInt(scanner.nextLine());
                     
                     Student selectedStudent = university.getStudents().get(studentIndex);
 
-                    System.out.println("Mille kurssille suorite lisätään?:");
+                    System.out.println("Mille kurssille suorite lisätään?");
                     String course = scanner.nextLine();
-                    System.out.println("Mikä arvosana kurssille lisätään?:");
+                    System.out.println("Mikä arvosana kurssille lisätään?");
                     int grade = Integer.parseInt(scanner.nextLine());
                     selectedStudent.addGrade(course, grade);
                     break;
 
                 case 4:
-                    System.out.println("Minkä opiskelijan suoritteet listataan?");
                     List<Student> studentsList3 = university.getStudents();
                     for (int i = 0; i < studentsList3.size(); i++) {
-                        System.out.println(i + ": " + studentsList3.get(i).getName());
+                    System.out.println(i + ": " + studentsList3.get(i).getName());
                     }
+                    System.out.println("Minkä opiskelijan suoritteet listataan?");
+                    
                     int selectedStudentIndex = Integer.parseInt(scanner.nextLine());
                     Student selectedStudentToPrint = university.getStudents().get(selectedStudentIndex);
                     List<Grade> studentGrades = selectedStudentToPrint.getGrades();
@@ -67,11 +70,12 @@ public class App {
                     break;
 
                 case 5:
-                    System.out.println("Minkä opiskelijan suoritteiden keskiarvo lasketaan?");
                     List<Student> studentsList4 = university.getStudents();
                     for (int i = 0; i < studentsList4.size(); i++) {
-                        System.out.println(i + ": " + studentsList4.get(i).getName());
-                    }
+                    System.out.println(i + ": " + studentsList4.get(i).getName());
+                     }
+                    System.out.println("Minkä opiskelijan suoritteiden keskiarvo lasketaan?");
+                    
                     int studentAverageIndex = Integer.parseInt(scanner.nextLine());
                     Student studentForAverage = university.getStudents().get(studentAverageIndex);
                     double average = Calculator.getAverageGrade(studentForAverage);
@@ -79,11 +83,12 @@ public class App {
                     break;
 
                 case 6:
-                    System.out.println("Minkä opiskelijan suoritteiden mediaani lasketaan?");
                     List<Student> studentsList5 = university.getStudents();
                     for (int i = 0; i < studentsList5.size(); i++) {
-                        System.out.println(i + ": " + studentsList5.get(i).getName());
+                    System.out.println(i + ": " + studentsList5.get(i).getName());
                     }
+                    System.out.println("Minkä opiskelijan suoritteiden mediaani lasketaan?");
+                    
                     int studentMedianIndex = Integer.parseInt(scanner.nextLine());
                     Student studentForMedian = university.getStudents().get(studentMedianIndex);
                     double median = Calculator.getMedianGrade(studentForMedian);
