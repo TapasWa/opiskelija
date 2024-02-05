@@ -14,8 +14,8 @@ public class App {
                     "6) Laske opiskelijan suoritusten mediaani, 7) Tallenna opiskelijat tiedostoon, " +
                     "8) Lataa opiskelijat tiedostosta, 0) Lopeta ohjelma");
 
-            String choiceString = scanner.nextLine();
-            int choice = Integer.parseInt(choiceString);
+            int choice = scanner.nextInt();
+            scanner.nextLine();  
 
             switch (choice) {
                 case 1:
@@ -31,14 +31,14 @@ public class App {
                     System.out.println("Opiskelijat:");
                     List<Student> students = university.getStudents();
                     for (int i = 0; i < students.size(); i++) {
-                        System.out.println(students.get(i).getStudentNumber() + ": " + students.get(i).getName());
+                        System.out.println(i + ": " + students.get(i).getStudentNumber() + ": " + students.get(i).getName());
                     }
                     break;
 
                 case 3:
                     System.out.println("Mille opiskelijalle suorite lisätään?");
                     int studentIndex = scanner.nextInt();
-                    scanner.nextLine();  
+                    scanner.nextLine(); 
                     Student selectedStudent = university.getStudents().get(studentIndex);
                     System.out.println("Mille kurssille suorite lisätään?");
                     String course = scanner.nextLine();
@@ -93,6 +93,6 @@ public class App {
                     System.out.println("Syöte oli väärä.");
             }
         }
-    
     }
 }
+
