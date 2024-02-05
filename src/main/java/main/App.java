@@ -60,7 +60,7 @@ public class App {
 
                 case 5:
                     System.out.println("Minkä opiskelijan suoritteiden keskiarvo lasketaan?");
-                    int studentAverageIndex = scanner.nextInt();
+                    int studentAverageIndex = Integer.parseInt(scanner.nextLine());
                     Student studentForAverage = university.getStudents().get(studentAverageIndex);
                     double average = Calculator.getAverageGrade(studentForAverage);
                     System.out.println("Keskiarvo on " + average);
