@@ -47,7 +47,7 @@ public class App {
 
                     System.out.println("Mille kurssille suorite lisätään?:");
                     String course = scanner.nextLine();
-                    System.out.println("A:");
+                    System.out.println("Mikä arvosana kurssille lisätään?:");
                     int grade = Integer.parseInt(scanner.nextLine());
                     selectedStudent.addGrade(course, grade);
                     break;
