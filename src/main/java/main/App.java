@@ -33,7 +33,7 @@ public class App {
                     System.out.println("Opiskelijat:");
                     List<Student> students = university.getStudents();
                     for (int i = 0; i < students.size(); i++) {
-                        System.out.println(i + ": " + students.get(i).getStudentNumber() + ": " + students.get(i).getName());
+                        System.out.println( students.get(i).getStudentNumber() + ": " + students.get(i).getName());
                     }
                     break;
 
