@@ -16,11 +16,10 @@ public class App {
                     "6) Laske opiskelijan suoritusten mediaani, 7) Tallenna opiskelijat tiedostoon, " +
                     "8) Lataa opiskelijat tiedostosta, 0) Lopeta ohjelma");
 
-            String choiceString = scanner.nextLine();
-            int choice = Integer.parseInt(choiceString);
-            scanner.nextLine();
+            String StringInput=scanner.nextLine();
+            int k = Integer.parseInt(StringInput);
 
-            switch (choice) {
+            switch (k) {
                 case 1:
                     System.out.println("Anna opiskelijan nimi?");
                     String name = scanner.nextLine();
@@ -34,7 +33,7 @@ public class App {
                     System.out.println("Opiskelijat:");
                     List<Student> students = university.getStudents();
                     for (int i = 0; i < students.size(); i++) {
-                        System.out.println(i + ": " + students.get(i).getStudentNumber() + ": " + students.get(i).getName());
+                        System.out.println( students.get(i).getStudentNumber() + ": " + students.get(i).getName());
                     }
                     break;
 
