@@ -8,7 +8,7 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         University university = new University();
         
-        scanner.nextLine();
+       
 
         while (true) {
             System.out.println("1) Lisää opiskelija, 2) Listaa opiskelijat, 3) Lisää opiskelijalle suorite, " +
@@ -18,6 +18,7 @@ public class App {
 
             String choiceString = scanner.nextLine();
             int choice = Integer.parseInt(choiceString);
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
