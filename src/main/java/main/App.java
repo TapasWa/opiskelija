@@ -31,7 +31,7 @@ public class App {
                     System.out.println("Opiskelijat:");
                     List<Student> studentsList = university.getStudents();
                     for (int i = 0; i < studentsList.size(); i++) {
-                        System.out.println(i + ": " + studentsList.get(i).getName());
+                        System.out.println(studentsList.get(i).getStudentNumber() + ": " + studentsList.get(i).getName());
                     }
                     break;
 
@@ -45,9 +45,9 @@ public class App {
                     
                     Student selectedStudent = university.getStudents().get(studentIndex);
 
-                    System.out.println("Anna kurssin nimi:");
+                    System.out.println("Mille kurssille suorite lisätään?:");
                     String course = scanner.nextLine();
-                    System.out.println("Anna arvosana:");
+                    System.out.println("A:");
                     int grade = Integer.parseInt(scanner.nextLine());
                     selectedStudent.addGrade(course, grade);
                     break;
@@ -82,7 +82,7 @@ public class App {
                     System.out.println("Minkä opiskelijan suoritteiden mediaani lasketaan?");
                     List<Student> studentsList5 = university.getStudents();
                     for (int i = 0; i < studentsList5.size(); i++) {
-                        System.out.println(i+ ": " + studentsList5.get(i).getName());
+                        System.out.println(i + ": " + studentsList5.get(i).getName());
                     }
                     int studentMedianIndex = Integer.parseInt(scanner.nextLine());
                     Student studentForMedian = university.getStudents().get(studentMedianIndex);
