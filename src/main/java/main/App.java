@@ -37,7 +37,7 @@ public class App {
                 case 3:
                     System.out.println("Mille opiskelijalle suorite lisätään?");
                     int studentIndex = Integer.parseInt(scanner.nextLine());
-                    
+                    scanner.nextLine();
                     Student selectedStudent = university.getStudents().get(studentIndex);
 
                     System.out.println("Anna kurssin nimi:");
@@ -46,7 +46,6 @@ public class App {
                     int grade = Integer.parseInt(scanner.nextLine());
                     selectedStudent.addGrade(course, grade);
                     break;
-
 
                 case 4:
                     System.out.println("Minkä opiskelijan suoritteet listataan?");
