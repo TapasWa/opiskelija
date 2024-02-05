@@ -40,21 +40,21 @@ public class App {
 
                 case 3:
                     System.out.println("Mille opiskelijalle suorite lisätään?");
-                    int studentIndex = scanner.nextInt();
+                    int studentIndex = Integer.parseInt(scanner.nextLine());
                     scanner.nextLine();  
                     Student selectedStudent = university.getStudents().get(studentIndex);
 
                     System.out.println("Anna kurssin nimi:");
                     String course = scanner.nextLine();
                     System.out.println("Anna arvosana:");
-                    int grade = scanner.nextInt();
+                    int grade = Integer.parseInt(scanner.nextLine());
                     selectedStudent.addGrade(course, grade);
                     break;
 
 
                 case 4:
                     System.out.println("Minkä opiskelijan suoritteet listataan?");
-                    int selectedStudentIndex = scanner.nextInt();
+                    int selectedStudentIndex = Integer.parseInt(scanner.nextLine());
                     Student selectedStudentToPrint = university.getStudents().get(selectedStudentIndex);
                     List<Grade> studentGrades = selectedStudentToPrint.getGrades();
                     for (Grade studentGrade : studentGrades) {
@@ -64,7 +64,7 @@ public class App {
 
                 case 5:
                     System.out.println("Minkä opiskelijan suoritteiden keskiarvo lasketaan?");
-                    int studentAverageIndex = scanner.nextInt();
+                    int studentAverageIndex = Integer.parseInt(scanner.nextLine());
                     Student studentForAverage = university.getStudents().get(studentAverageIndex);
                     double average = Calculator.getAverageGrade(studentForAverage);
                     System.out.println("Keskiarvo on " + average);
@@ -72,7 +72,7 @@ public class App {
 
                 case 6:
                     System.out.println("Minkä opiskelijan suoritteiden mediaani lasketaan?");
-                    int studentMedianIndex = scanner.nextInt();
+                    int studentMedianIndex = Integer.parseInt(scanner.nextLine());
                     Student studentForMedian = university.getStudents().get(studentMedianIndex);
                     double median = Calculator.getMedianGrade(studentForMedian);
                     System.out.println("Mediaani on " + median);
