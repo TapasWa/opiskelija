@@ -35,4 +35,9 @@ public class University implements Serializable {
             return null;
         }
     }
+    public void listStudents() {
+        for  (Student student : students) {
+           student.tiedot();
+        }
+    }
 }

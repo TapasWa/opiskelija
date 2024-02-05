@@ -39,4 +39,7 @@ public class Student implements Serializable {
     public String getStudentNumber() {
         return studentNumber;
     }
+    public void tiedot() {
+        System.out.println(studentNumber + ": " + name);
+    }
 }
