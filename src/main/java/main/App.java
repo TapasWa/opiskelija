@@ -7,8 +7,6 @@ public class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         University university = new University();
-        
-       
 
         while (true) {
             System.out.println("1) Lisää opiskelija, 2) Listaa opiskelijat, 3) Lisää opiskelijalle suorite, " +
@@ -16,8 +14,7 @@ public class App {
                     "6) Laske opiskelijan suoritusten mediaani, 7) Tallenna opiskelijat tiedostoon, " +
                     "8) Lataa opiskelijat tiedostosta, 0) Lopeta ohjelma");
 
-            String StringInput=scanner.nextLine();
-            int k = Integer.parseInt(StringInput);
+            int k = Integer.parseInt(scanner.nextLine());
 
             switch (k) {
                 case 1:
@@ -33,15 +30,14 @@ public class App {
                     System.out.println("Opiskelijat:");
                     List<Student> students = university.getStudents();
                     for (int i = 0; i < students.size(); i++) {
-                        System.out.println( students.get(i).getStudentNumber() + ": " + students.get(i).getName());
+                        System.out.println(students.get(i).getStudentNumber() + ": " + students.get(i).getName());
                     }
                     break;
-
 
                 case 3:
                     System.out.println("Mille opiskelijalle suorite lisätään?");
                     int studentIndex = Integer.parseInt(scanner.nextLine());
-                    scanner.nextLine();  
+                    scanner.nextLine();
                     Student selectedStudent = university.getStudents().get(studentIndex);
 
                     System.out.println("Anna kurssin nimi:");
