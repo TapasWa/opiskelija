@@ -16,9 +16,9 @@ public class App {
                     "6) Laske opiskelijan suoritusten mediaani, 7) Tallenna opiskelijat tiedostoon, " +
                     "8) Lataa opiskelijat tiedostosta, 0) Lopeta ohjelma");
 
-            String choiceString = scanner.nextLine();
-            int choice = Integer.parseInt(choiceString);
-            scanner.nextLine();
+                String choiceString = scanner.nextLine();
+                int choice = Integer.parseInt(choiceString);
+           
 
             switch (choice) {
                 case 1:
